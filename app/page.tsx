@@ -220,7 +220,7 @@ export default function Home() {
       <section className="relative overflow-hidden h-screen bg-black">
         {/* Orb Background */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="w-[600px] h-[600px] md:w-[800px] md:h-[800px] flex-shrink-0">
+          <div className="w-[700px] h-[700px] md:w-[1000px] md:h-[1000px] flex-shrink-0">
             <Orb />
           </div>
         </div>
