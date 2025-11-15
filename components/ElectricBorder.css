@@ -1,0 +1,132 @@
+.electric-border {
+  --electric-border-color: #5227ff;
+  --eb-border-width: 2px;
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.electric-border .eb-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.electric-border .eb-layers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.electric-border .eb-stroke {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border: var(--eb-border-width) solid var(--electric-border-color);
+  border-radius: inherit;
+  z-index: 50;
+  opacity: 1;
+  box-shadow: 
+    0 0 5px var(--electric-border-color),
+    0 0 15px var(--electric-border-color),
+    0 0 30px var(--electric-border-color),
+    0 0 50px var(--electric-border-color),
+    inset 0 0 10px var(--electric-border-color),
+    inset 0 0 20px rgba(0, 217, 255, 0.5);
+  filter: brightness(1.4) saturate(1.2);
+  pointer-events: none;
+}
+
+.electric-border .eb-glow-1 {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 217, 255, 1),
+    rgba(0, 217, 255, 0.5),
+    transparent
+  );
+  z-index: 5;
+  animation: electric-glow-pulse 2s ease-in-out infinite;
+  box-shadow: 0 0 60px rgba(0, 217, 255, 0.8);
+}
+
+.electric-border .eb-glow-2 {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 217, 255, 0.6),
+    rgba(0, 217, 255, 0.2),
+    transparent
+  );
+  z-index: 4;
+  animation: electric-glow-pulse 3s ease-in-out infinite;
+  animation-delay: -1s;
+  box-shadow: 0 0 100px rgba(0, 217, 255, 0.6);
+}
+
+.electric-border .eb-background-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at center,
+    rgba(82, 39, 255, 0.05),
+    transparent 70%
+  );
+  z-index: 0;
+}
+
+.electric-border .eb-content {
+  position: relative;
+  z-index: 3;
+}
+
+@keyframes electric-glow-pulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .electric-border .eb-glow-1 {
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+  }
+
+  .electric-border .eb-glow-2 {
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+  }
+}
