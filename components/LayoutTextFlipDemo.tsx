@@ -9,6 +9,7 @@ export function LayoutTextFlipDemo() {
         className="relative mx-4 my-4 flex flex-col items-center justify-center gap-4 text-center sm:mx-0 sm:mb-0 sm:flex-row">
         <LayoutTextFlip
           text="Building with "
+          textClassName="text-white"
           words={["React", "Next.js", "TypeScript", "Tailwind CSS"]} />
       </motion.div>
       <p
