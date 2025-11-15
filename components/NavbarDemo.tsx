@@ -5,13 +5,11 @@ import {
   NavItems,
   MobileNav,
   NavbarLogo,
-  NavbarButton,
   MobileNavHeader,
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
-import Link from "next/link";
 
 export function NavbarDemo() {
   const navItems = [
@@ -43,12 +41,12 @@ export function NavbarDemo() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="secondary">
-              <Link href="/signin">Sign In</Link>
-            </NavbarButton>
-            <NavbarButton variant="primary">
-              <Link href="/pricing">Get Started</Link>
-            </NavbarButton>
+            <a href="/signin" className="px-4 py-2 rounded-md text-black text-sm font-bold hover:bg-gray-100">
+              Sign In
+            </a>
+            <a href="/pricing" className="px-4 py-2 rounded-md bg-black text-white text-sm font-bold hover:bg-gray-900">
+              Get Started
+            </a>
           </div>
         </NavBody>
 
@@ -63,27 +61,21 @@ export function NavbarDemo() {
 
           <MobileNavMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)}>
             {navItems.map((item, idx) => (
-              <Link
+              <a
                 key={`mobile-link-${idx}`}
                 href={item.link}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="relative text-neutral-600 dark:text-neutral-300">
                 <span className="block">{item.name}</span>
-              </Link>
+              </a>
             ))}
             <div className="flex w-full flex-col gap-4">
-              <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="secondary"
-                className="w-full">
-                <Link href="/signin">Sign In</Link>
-              </NavbarButton>
-              <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full">
-                <Link href="/pricing">Get Started</Link>
-              </NavbarButton>
+              <a href="/signin" onClick={() => setIsMobileMenuOpen(false)} className="w-full px-4 py-2 rounded-md text-black text-sm font-bold hover:bg-gray-100 text-center">
+                Sign In
+              </a>
+              <a href="/pricing" onClick={() => setIsMobileMenuOpen(false)} className="w-full px-4 py-2 rounded-md bg-black text-white text-sm font-bold hover:bg-gray-900 text-center">
+                Get Started
+              </a>
             </div>
           </MobileNavMenu>
         </MobileNav>
