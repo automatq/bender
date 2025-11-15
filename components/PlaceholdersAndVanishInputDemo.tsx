@@ -1,7 +1,8 @@
 "use client";
 
 import { PlaceholdersAndVanishInput } from "@/components/ui/placeholders-and-vanish-input";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
+import { motion } from "motion/react";
 import { useState } from "react";
 
 export function PlaceholdersAndVanishInputDemo() {
@@ -49,9 +50,29 @@ export function PlaceholdersAndVanishInputDemo() {
   };
 
   return (
-    <div className="h-auto flex flex-col justify-center items-center px-4 py-10">
-      <TextGenerateEffect words="Have questions about our services?" />
-      <PlaceholdersAndVanishInput
+    <HeroHighlight>
+      <div className="h-auto flex flex-col justify-center items-center px-4 py-10">
+        <motion.h2
+          initial={{
+            opacity: 0,
+            y: 20,
+          }}
+          animate={{
+            opacity: 1,
+            y: [20, -5, 0],
+          }}
+          transition={{
+            duration: 0.5,
+            ease: [0.4, 0.0, 0.2, 1],
+          }}
+          className="text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto mb-12"
+        >
+          Have{" "}
+          <Highlight className="text-black dark:text-white">
+            questions about our services?
+          </Highlight>
+        </motion.h2>
+        <PlaceholdersAndVanishInput
         placeholders={placeholders}
         onChange={handleChange}
         onSubmit={onSubmit}
@@ -71,5 +92,6 @@ export function PlaceholdersAndVanishInputDemo() {
         </div>
       )}
     </div>
+    </HeroHighlight>
   );
 }
