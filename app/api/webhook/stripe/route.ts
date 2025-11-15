@@ -3,6 +3,8 @@ import Stripe from 'stripe';
 import { prisma } from '@/lib/prisma';
 import bcrypt from 'bcryptjs';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(request: NextRequest) {
   try {
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
