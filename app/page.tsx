@@ -14,7 +14,7 @@ import { PlaceholdersAndVanishInputDemo } from '@/components/PlaceholdersAndVani
 import { HeroParallaxDemo } from '@/components/HeroParallaxDemo';
 import { TypewriterEffectSmoothDemo } from '@/components/TypewriterEffectSmoothDemo';
 import { TextGenerateEffectDemo } from '@/components/TextGenerateEffectDemo';
-import { SidebarDemo } from '@/components/SidebarDemo';
+import { SidebarNav } from '@/components/SidebarDemo';
 import { StickyScrollRevealDemo } from '@/components/StickyScrollRevealDemo';
 import { CardStack } from '@/components/ui/card-stack';
 
@@ -206,8 +206,9 @@ export default function Home() {
   ];
   return (
     <>
-      <SidebarDemo />
-      <div className="min-h-screen bg-white relative overflow-hidden">
+      <div className="flex w-full md:flex-row flex-col">
+        <SidebarNav />
+        <div className="flex-1 overflow-y-auto w-full">
       {/* Animated Background */}
       <div className="fixed inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-yellow-50"></div>
@@ -438,7 +439,8 @@ export default function Home() {
           <p>&copy; 2025 EliteWeb. All rights reserved.</p>
         </div>
       </footer>
-    </div>
+        </div>
+      </div>
     </>
   );
 }
