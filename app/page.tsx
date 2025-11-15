@@ -221,40 +221,6 @@ export default function Home() {
           <Orb />
         </div>
 
-        {/* Navigation */}
-        <nav className="absolute top-0 left-0 right-0 z-50 px-6 py-6 relative z-20">
-          <div className="absolute inset-0 bg-black/40 backdrop-blur-xl border-b border-white/20"></div>
-          <div className="max-w-7xl mx-auto flex justify-between items-center relative z-10">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-2xl font-bold text-yellow-500 drop-shadow-lg"
-            >
-              <span className="text-yellow-400">Elite</span>Web
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className="flex gap-4"
-            >
-              <Link
-                href="/signin"
-                className="px-6 py-2 text-yellow-400 hover:text-yellow-300 transition-colors drop-shadow-lg"
-              >
-                Sign In
-              </Link>
-              <Link
-                href="/pricing"
-                className="px-6 py-2 bg-gradient-to-r from-yellow-500 to-yellow-600 text-black rounded-lg hover:from-yellow-400 hover:to-yellow-500 transition-all shadow-lg hover:shadow-yellow-500/50 transform hover:scale-105"
-              >
-                Get Started
-              </Link>
-            </motion.div>
-          </div>
-        </nav>
-
         {/* Hero Content Container */}
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="max-w-7xl mx-auto px-6 w-full py-32 text-center">
