@@ -11,6 +11,7 @@ import { DottedGlowBackgroundDemo } from '@/components/DottedGlowBackgroundDemo'
 import { FocusCardsDemo } from '@/components/FocusCardsDemo';
 import { LayoutTextFlipDemo } from '@/components/LayoutTextFlipDemo';
 import { PlaceholdersAndVanishInputDemo } from '@/components/PlaceholdersAndVanishInputDemo';
+import { HeroParallaxDemo } from '@/components/HeroParallaxDemo';
 import { CardStack } from '@/components/ui/card-stack';
 
 import dynamic from 'next/dynamic';
@@ -384,7 +385,14 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Portfolio Showcase Section */}
+      <section className="py-20 relative overflow-hidden bg-black">
+        <div className="relative z-10">
+          <HeroParallaxDemo />
+        </div>
+      </section>
 
+      {/* Testimonials Section */}
       <section className="py-20 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-yellow-50/30 to-transparent"></div>
         <div className="max-w-7xl mx-auto px-6">
