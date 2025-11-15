@@ -10,6 +10,7 @@ import { LinkPreviewDemo } from '@/components/LinkPreviewDemo';
 import { DottedGlowBackgroundDemo } from '@/components/DottedGlowBackgroundDemo';
 import { FocusCardsDemo } from '@/components/FocusCardsDemo';
 import { LayoutTextFlipDemo } from '@/components/LayoutTextFlipDemo';
+import { PlaceholdersAndVanishInputDemo } from '@/components/PlaceholdersAndVanishInputDemo';
 import { CardStack } from '@/components/ui/card-stack';
 
 import dynamic from 'next/dynamic';
@@ -289,6 +290,13 @@ export default function Home() {
               </Link>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Questions Input Section */}
+      <section className="py-20 relative overflow-hidden bg-white">
+        <div className="relative z-10">
+          <PlaceholdersAndVanishInputDemo />
         </div>
       </section>
 
