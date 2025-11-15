@@ -219,8 +219,10 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative overflow-hidden h-screen bg-black">
         {/* Orb Background */}
-        <div className="absolute inset-0 w-full h-full">
-          <Orb />
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="w-[600px] h-[600px] md:w-[800px] md:h-[800px] flex-shrink-0">
+            <Orb />
+          </div>
         </div>
 
         {/* Hero Content Container */}
