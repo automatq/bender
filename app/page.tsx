@@ -15,6 +15,7 @@ import { HeroParallaxDemo } from '@/components/HeroParallaxDemo';
 import { TypewriterEffectSmoothDemo } from '@/components/TypewriterEffectSmoothDemo';
 import { TextGenerateEffectDemo } from '@/components/TextGenerateEffectDemo';
 import { NavbarDemo } from '@/components/NavbarDemo';
+import { StickyScrollRevealDemo } from '@/components/StickyScrollRevealDemo';
 import { CardStack } from '@/components/ui/card-stack';
 
 import dynamic from 'next/dynamic';
@@ -394,6 +395,13 @@ export default function Home() {
           <div className="relative z-10">
             <AnimatedTestimonials testimonials={testimonials} autoplay={true} />
           </div>
+        </div>
+      </section>
+
+      {/* Sticky Scroll Services Section */}
+      <section className="py-20 relative overflow-hidden bg-white">
+        <div className="relative z-10">
+          <StickyScrollRevealDemo />
         </div>
       </section>
 
