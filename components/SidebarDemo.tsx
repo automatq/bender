@@ -13,29 +13,29 @@ import { cn } from "@/lib/utils";
 export function SidebarNav() {
   const links = [
     {
-      label: "Services",
-      href: "#services",
+      label: "Home",
+      href: "/",
       icon: (
         <IconBrandTabler className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
-      ),
-    },
-    {
-      label: "Portfolio",
-      href: "#portfolio",
-      icon: (
-        <IconUserBolt className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
       ),
     },
     {
       label: "Pricing",
       href: "/pricing",
       icon: (
+        <IconUserBolt className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
+      ),
+    },
+    {
+      label: "Sign In",
+      href: "/signin",
+      icon: (
         <IconSettings className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
       ),
     },
     {
-      label: "Contact",
-      href: "#contact",
+      label: "Dashboard",
+      href: "/dashboard",
       icon: (
         <IconArrowLeft className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
       ),
@@ -57,7 +57,7 @@ export function SidebarNav() {
           <SidebarLink
             link={{
               label: "Chris Bender",
-              href: "#",
+              href: "/dashboard",
               icon: (
                 <img
                   src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop"
