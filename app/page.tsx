@@ -13,6 +13,7 @@ import { LayoutTextFlipDemo } from '@/components/LayoutTextFlipDemo';
 import { PlaceholdersAndVanishInputDemo } from '@/components/PlaceholdersAndVanishInputDemo';
 import { HeroParallaxDemo } from '@/components/HeroParallaxDemo';
 import { TypewriterEffectSmoothDemo } from '@/components/TypewriterEffectSmoothDemo';
+import { TextGenerateEffectDemo } from '@/components/TextGenerateEffectDemo';
 import { CardStack } from '@/components/ui/card-stack';
 
 import dynamic from 'next/dynamic';
@@ -299,6 +300,13 @@ export default function Home() {
       <section className="py-20 relative overflow-hidden bg-gradient-to-b from-white to-gray-50">
         <div className="relative z-10">
           <TypewriterEffectSmoothDemo />
+        </div>
+      </section>
+
+      {/* Text Generate Effect Section */}
+      <section className="py-20 relative overflow-hidden bg-white">
+        <div className="relative z-10 max-w-4xl mx-auto">
+          <TextGenerateEffectDemo />
         </div>
       </section>
 
