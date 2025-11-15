@@ -212,7 +212,7 @@ export default function Home() {
         <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-yellow-300/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
       {/* Hero Section */}
-      <section className="relative overflow-hidden h-screen">
+      <section className="relative overflow-hidden h-screen bg-black">
         {/* Orb Background */}
         <div className="absolute inset-0 w-full h-full">
           <Orb />
