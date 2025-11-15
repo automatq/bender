@@ -3,12 +3,12 @@ import Stripe from 'stripe';
 import { prisma } from '@/lib/prisma';
 import { verifyToken } from '@/lib/auth';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2025-10-29.clover',
-});
-
 export async function POST(request: NextRequest) {
   try {
+    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+      apiVersion: '2025-10-29.clover',
+    });
+
     const { packageType, title, description, price, userId, userEmail, userName } = await request.json();
 
     // Validate input
