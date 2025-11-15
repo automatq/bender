@@ -14,6 +14,7 @@ import { PlaceholdersAndVanishInputDemo } from '@/components/PlaceholdersAndVani
 import { HeroParallaxDemo } from '@/components/HeroParallaxDemo';
 import { TypewriterEffectSmoothDemo } from '@/components/TypewriterEffectSmoothDemo';
 import { TextGenerateEffectDemo } from '@/components/TextGenerateEffectDemo';
+import { NavbarDemo } from '@/components/NavbarDemo';
 import { CardStack } from '@/components/ui/card-stack';
 
 import dynamic from 'next/dynamic';
@@ -203,7 +204,9 @@ export default function Home() {
     },
   ];
   return (
-    <div className="min-h-screen bg-white relative overflow-hidden">
+    <>
+      <NavbarDemo />
+      <div className="min-h-screen bg-white relative overflow-hidden">
       {/* Animated Background */}
       <div className="fixed inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-yellow-50"></div>
@@ -462,5 +465,6 @@ export default function Home() {
         </div>
       </footer>
     </div>
+    </>
   );
 }
