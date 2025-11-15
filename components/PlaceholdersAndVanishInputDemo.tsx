@@ -1,6 +1,7 @@
 "use client";
 
 import { PlaceholdersAndVanishInput } from "@/components/ui/placeholders-and-vanish-input";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { useState } from "react";
 
 export function PlaceholdersAndVanishInputDemo() {
@@ -49,9 +50,7 @@ export function PlaceholdersAndVanishInputDemo() {
 
   return (
     <div className="h-auto flex flex-col justify-center items-center px-4 py-10">
-      <h2 className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl dark:text-white text-black">
-        Have questions about our services?
-      </h2>
+      <TextGenerateEffect words="Have questions about our services?" />
       <PlaceholdersAndVanishInput
         placeholders={placeholders}
         onChange={handleChange}
